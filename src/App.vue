@@ -2,6 +2,7 @@
   <div>
     <h2 style="color: #025cc3;position: absolute;margin:-5.89vh 0 0 1.04vw" >DGNet</h2>
     <div id="top">
+
       <div id="left">
         <div class="nav"><div style="transform: scale(0.6);line-height: 90%;"><span></span>数据采集源统计</div></div>
         <div class="navcontent">
@@ -14,9 +15,9 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.allcount||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.allcount||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.allcount||'no data'}}</span>
               </div>
             </div>
           </div>
@@ -29,9 +30,9 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.chongqing||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.chongqing||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.chongqing||'no data'}}</span>
               </div>
             </div>
           </div>
@@ -44,9 +45,9 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.renren||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.renren||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.renren||'no data'}}</span>
               </div>
             </div>
           </div>
@@ -59,9 +60,9 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.sjjy||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.sjjy||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.sjjy||'no data'}}</span>
               </div>
             </div>
           </div>
@@ -74,9 +75,9 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.badoo||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.badoo||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.badoo||'no data'}}</span>
               </div>
             </div>
           </div>
@@ -89,14 +90,15 @@
                 <span class="littlefont">本月</span>
               </div>
               <div class="detailcontentright">
-                <span class="littlenum">456789</span>
-                <span class="littlenum">14566789</span>
-                <span class="littlenum">123456789</span>
+                <span class="littlenum">{{collectcount.today.internal||'no data'}}</span>
+                <span class="littlenum">{{collectcount.weekly.internal||'no data'}}</span>
+                <span class="littlenum">{{collectcount.monthly.internal||'no data'}}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div id="right">
         <div class="nav"><div style="transform: scale(0.6);line-height: 90%;">入库量统计</div></div>
         <div class="navcontent">
@@ -193,6 +195,7 @@
         </div>
       </div>
     </div>
+
     <div id="bottom">
       <div class="nav"><div style="transform: scale(0.6);line-height: 90%;margin-left: -23%">聚类簇统计</div></div>
       <div class="bottomcontent">
@@ -430,7 +433,58 @@ export default {
   name: 'app',
   data(){
       return {
-        washedcount :{},
+        collectcount :{
+          "monthly": {
+            "allcount":0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0,
+          },
+          "today": {
+            "allcount": 0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0,
+          },
+          "weekly": {
+            "allcount": 0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0
+          }
+        },
+        washedcount :{
+          "monthly": {
+            "allcount":0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0,
+          },
+          "today": {
+            "allcount": 0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0,
+          },
+          "weekly": {
+            "allcount": 0,
+            "badoo": 0,
+            "chongqing": 0,
+            "internal": 0,
+            "renren": 0,
+            "sjjy": 0
+          }
+        },
         }
       },
   created(){
