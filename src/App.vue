@@ -427,8 +427,7 @@
 </template>
 
 <script>
-
-
+  import {TweenMax, Power2, TimelineLite} from "gsap";
 export default {
   name: 'app',
   data(){
@@ -492,7 +491,8 @@ export default {
           console.log(response);
           this.washedcount=response.data;
       })
-  }
+  },
+
 
 }
 </script>
