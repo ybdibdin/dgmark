@@ -427,7 +427,7 @@
 </template>
 
 <script>
-  import {TweenMax, Power2, TimelineLite} from "gsap";
+  import {TweenLite} from "gsap";
 export default {
   name: 'app',
   data(){
@@ -492,6 +492,17 @@ export default {
           this.washedcount=response.data;
       })
   },
+  mounted(){
+      let i=1;
+    let test=setInterval(()=>{
+        let gap=100;
+        let time=10;
+        let count=(gap*i)/time;
+        //console.log(Math.round(gap*Math.sin((Math.PI/2)*(i/time))));
+        this.washedcount.today.allcount=Math.round(gap*Math.sin((Math.PI/2)*(i++/time)));
+        if(i==11){clearInterval(test)}
+    },1000)
+  }
 
 
 }
