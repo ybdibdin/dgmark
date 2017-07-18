@@ -1,8 +1,234 @@
 <template>
   <div>
-    <h2 style="color: #025cc3;position: absolute;margin:-5.89vh 0 0 1.04vw" >DGNet</h2>
+    <h2 style="color: #025cc3;position: absolute;margin:-3.5% 0 0 46%" >DGNet</h2>
     <div id="top">
-
+      <div class="nav"><div style="transform: scale(0.6);line-height: 90%;">聚类簇统计</div></div>
+      <div class="topcontent">
+        <div class="count">
+          <div class="title" style="background-color: #d5b100;"><span style="transform: scale(0.6);">总数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.allcount||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.allcount||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.allcount||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.allcount||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.allcount||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.allcount||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.allcount||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.allcount||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="title" style="background-color: #d44144;"><span style="transform: scale(0.6);white-space: nowrap;">重庆产品数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.chongqing||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.chongqing||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.chongqing||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.chongqing||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.chongqing||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.chongqing||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.chongqing||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.chongqing||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="title" style="background-color: #57c269;"><span style="transform: scale(0.6);">人人网数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.renren||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.renren||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.renren||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.renren||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.renren||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.renren||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.renren||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.renren||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="title" style="background-color: #6548ff;"><span style="transform: scale(0.6);white-space: nowrap;">世纪佳缘网数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.sjjy||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.sjjy||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.sjjy||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.sjjy||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.sjjy||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.sjjy||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.sjjy||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.sjjy||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="title" style="background-color: #fe6e00;"><span style="transform: scale(0.6);">badoo数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.badoo||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.badoo||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.badoo||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.badoo||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.badoo||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.badoo||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.badoo||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.badoo||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+        <div class="count">
+          <div class="title" style="background-color: #13a7d0;"><span style="transform: scale(0.6);white-space: nowrap;">公司内部数据</span></div>
+          <div class="data">
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.allsize.internal||'no data'}}</div>
+              <div class="bbpic">总图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.zclustersize.internal||'no data'}}</div>
+              <div class="bbpic">0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclustersize.internal||'no data'}}</div>
+              <div class="bbpic">非0簇图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclustersize.internal||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数>10图片数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclustersize.internal||'no data'}}</div>
+              <div class="bbpic">簇内单簇图片数<10</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.nzclusternum.internal||'no data'}}</div>
+              <div class="bbpic">非0簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.bigclusternum.internal||'no data'}}</div>
+              <div class="bbpic">簇内图片>10的簇数</div>
+            </div>
+            <div class="datadetail">
+              <div class="btnum">{{clustercount.smallclusternum.internal||'no data'}}</div>
+              <div class="bbpic">簇内图片<10的簇数</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottom">
       <div id="left">
         <div class="nav"><div style="transform: scale(0.6);line-height: 90%;"><span></span>数据采集源统计</div></div>
         <div class="navcontent">
@@ -98,7 +324,6 @@
           </div>
         </div>
       </div>
-
       <div id="right">
         <div class="nav"><div style="transform: scale(0.6);line-height: 90%;">入库量统计</div></div>
         <div class="navcontent">
@@ -195,239 +420,12 @@
         </div>
       </div>
     </div>
-
-    <div id="bottom">
-      <div class="nav"><div style="transform: scale(0.6);line-height: 90%;margin-left: -23%">聚类簇统计</div></div>
-      <div class="bottomcontent">
-        <div class="count">
-          <div class="title" style="background-color: #d5b100;"><span style="transform: scale(0.65);">总数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.allcount||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.allcount||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.allcount||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.allcount||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.allcount||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.allcount||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.allcount||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.allcount||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-        <div class="count">
-          <div class="title" style="background-color: #d44144;"><span style="transform: scale(0.65);white-space: nowrap;">重庆产品数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.chongqing||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.chongqing||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.chongqing||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.chongqing||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.chongqing||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.chongqing||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.chongqing||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.chongqing||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-        <div class="count">
-          <div class="title" style="background-color: #57c269;"><span style="transform: scale(0.65);">人人网数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.renren||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.renren||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.renren||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.renren||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.renren||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.renren||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.renren||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.renren||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-        <div class="count">
-          <div class="title" style="background-color: #6548ff;"><span style="transform: scale(0.65);white-space: nowrap;">世纪佳缘网数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.sjjy||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.sjjy||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.sjjy||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.sjjy||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.sjjy||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.sjjy||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.sjjy||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.sjjy||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-        <div class="count">
-          <div class="title" style="background-color: #fe6e00;"><span style="transform: scale(0.65);">badoo数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.badoo||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.badoo||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.badoo||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.badoo||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.badoo||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.badoo||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.badoo||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.badoo||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-        <div class="count">
-          <div class="title" style="background-color: #13a7d0;"><span style="transform: scale(0.65);white-space: nowrap;">公司内部数据</span></div>
-          <div class="data">
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.allsize.internal||'no data'}}</div>
-              <div class="bbpic">总图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.zclustersize.internal||'no data'}}</div>
-              <div class="bbpic">0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclustersize.internal||'no data'}}</div>
-              <div class="bbpic">非0簇图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclustersize.internal||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数>10图片数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclustersize.internal||'no data'}}</div>
-              <div class="bbpic">簇内单簇图片数<10</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.nzclusternum.internal||'no data'}}</div>
-              <div class="bbpic">非0簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.bigclusternum.internal||'no data'}}</div>
-              <div class="bbpic">簇内图片>10的簇数</div>
-            </div>
-            <div class="datadetail">
-              <div class="btnum">{{clustercount.smallclusternum.internal||'no data'}}</div>
-              <div class="bbpic">簇内图片<10的簇数</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
   import {TweenLite} from "gsap";
+  import icon1 from '../image/titleicon.png'
 export default {
   name: 'app',
   data(){
@@ -497,32 +495,6 @@ export default {
             "internal": null,
             "renren": 0,
             "sjjy": null
-          }
-        },
-        collectcount :{
-          "monthly": {
-            "allcount":0,
-            "badoo": 0,
-            "chongqing": 0,
-            "internal": 0,
-            "renren": 0,
-            "sjjy": 0,
-          },
-          "today": {
-            "allcount": 0,
-            "badoo": 0,
-            "chongqing": 0,
-            "internal": 0,
-            "renren": 0,
-            "sjjy": 0,
-          },
-          "weekly": {
-            "allcount": 0,
-            "badoo": 0,
-            "chongqing": 0,
-            "internal": 0,
-            "renren": 0,
-            "sjjy": 0
           }
         },
         washedcount :{
@@ -613,29 +585,30 @@ export default {
 
 <style scoped>
 
-  #top{
-    height: 18.58vh;
+  #bottom{
+    height: 57.16vh;
     width: 98.07vw;
-    margin:6.86vh 0 0 1.04vw;
+    margin:1.62vh 0 0 1.04vw;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
   }
   #left{
-    width: 48.86vw;
-    height: 18.58vh;
+    width: 100%;
+    height: 27.93vh;
     background-color: #15283f;
   }
   #right{
     display: inline-block;
-    width: 48.86vw;
-    height: 18.58vh;
+    width: 100%;
+    height: 27.93vh;
     background-color: #15283f;
   }
-  #bottom{
+  #top{
     width: 98.07vw;
-    height: 66.13vh;
-    margin:1.99vh 0 0 1.04vw;
+    height: 31.59vh;
+    margin:6.71vh 0 0 1.04vw;
     background-color: #15283f;
   }
   .nav{
@@ -647,8 +620,8 @@ export default {
   }
   .navcontent{
     background-color: #14202f;
-    width: 46.18vw;
-    height: 14.5vh;
+    width: 100%;
+    height: 23.71vh;
     margin: 1.11vh 0 0 1.3vw;
     display: flex;
     justify-content: space-between;
@@ -656,12 +629,12 @@ export default {
   .detail{
     background-color: #13263f;
     height:100%;
-    width: 6.98vw;
+    width: 15.52vw;
   }
-  .bottomcontent{
+  .topcontent{
     width: 95.36vw;
-    height: 59.91vh;
-    margin:1.53vh 0 0 1.35vw;
+    height: 28.3vh;
+    margin:0.83vh 0 0 1.33vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -670,7 +643,7 @@ export default {
   .count{
     background-color: #13263f;
     width: 100%;
-    height: 7.55vh;
+    height: 3.89vh;
     display: flex;
 
   }
@@ -744,15 +717,16 @@ export default {
 
   }
   .btnum{
-    height:42.86%;
+    margin-top:1%;
+    height:22%;
     color: #0077fd;
-    font-size: 90%;
+    font-size: 50%;
   }
   .bbpic{
     height: 57.14%;
     display: flex;
     align-items: center;
-    font-size: 80%;
+    font-size: 70%;
     transform: scale(0.6);
     margin-top: 5%;
     white-space: nowrap;
