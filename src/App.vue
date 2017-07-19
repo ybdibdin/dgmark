@@ -2,7 +2,7 @@
   <div>
     <h2 style="color: #025cc3;position: absolute;margin:-3.5% 0 0 46%" >DGNet</h2>
     <div id="top">
-      <div class="nav"><div style="transform: scale(0.6);line-height: 90%;">聚类簇统计</div></div>
+      <div class="nav"><img src="../image/titleicon.png" style="transform: scale(0.4,0.4);position: absolute;top:6.4vh"/><div style="transform: scale(0.6);line-height: 90%;">聚类簇统计</div></div>
       <div class="topcontent">
         <div class="count">
           <div class="title" style="background-color: #d5b100;"><span style="transform: scale(0.6);">总数据</span></div>
@@ -230,191 +230,143 @@
     </div>
     <div id="bottom">
       <div id="left">
-        <div class="nav"><div style="transform: scale(0.6);line-height: 90%;"><span></span>数据采集源统计</div></div>
+        <div class="nav"><img src="../image/titleicon.png" style="transform: scale(0.4,0.4);position: absolute;top:39.7vh"/><div style="transform: scale(0.6);line-height: 90%;">数据采集源统计</div></div>
         <div class="navcontent">
           <div class="detail">
             <div class="detailnav" style="background-color: #d5b100;"><div class="navfont">总数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{collectcount.today.allcount||'no data'}}</span>
-                <span class="littlenum">{{collectcount.weekly.allcount||'no data'}}</span>
-                <span class="littlenum">{{collectcount.monthly.allcount||'no data'}}</span>
-              </div>
+                  <span class="littlenum">{{collectcount.today.allcount||'no data'}}</span>
+                  <span class="littlefont">本日</span>
+                  <span class="littlenum">{{collectcount.weekly.allcount||'no data'}}</span>
+                  <span class="littlefont">本周</span>
+                  <span class="littlenum">{{collectcount.monthly.allcount||'no data'}}</span>
+                  <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #d44144;"><div class="navfont">重庆产品数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
                 <span class="littlenum">{{collectcount.today.chongqing||'no data'}}</span>
+                <span class="littlefont">本日</span>
                 <span class="littlenum">{{collectcount.weekly.chongqing||'no data'}}</span>
+                <span class="littlefont">本周</span>
                 <span class="littlenum">{{collectcount.monthly.chongqing||'no data'}}</span>
-              </div>
+                <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #57c269;"><div class="navfont">人人网数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{collectcount.today.renren||'no data'}}</span>
-                <span class="littlenum">{{collectcount.weekly.renren||'no data'}}</span>
-                <span class="littlenum">{{collectcount.monthly.renren||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.renren||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.renren||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.renren||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #6648ff;"><div class="navfont">世纪佳缘数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{collectcount.today.sjjy||'no data'}}</span>
-                <span class="littlenum">{{collectcount.weekly.sjjy||'no data'}}</span>
-                <span class="littlenum">{{collectcount.monthly.sjjy||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.sjjy||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.sjjy||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.sjjy||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #fe6e00;"><div class="navfont">badoo数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{collectcount.today.badoo||'no data'}}</span>
-                <span class="littlenum">{{collectcount.weekly.badoo||'no data'}}</span>
-                <span class="littlenum">{{collectcount.monthly.badoo||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.badoo||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.badoo||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.badoo||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #13a7d0;"><div class="navfont">公司内部数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{collectcount.today.internal||'no data'}}</span>
-                <span class="littlenum">{{collectcount.weekly.internal||'no data'}}</span>
-                <span class="littlenum">{{collectcount.monthly.internal||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.dgface||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.dgface||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.dgface||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
         </div>
       </div>
       <div id="right">
-        <div class="nav"><div style="transform: scale(0.6);line-height: 90%;">入库量统计</div></div>
+        <div class="nav"><img src="../image/titleicon.png" style="transform: scale(0.4,0.4);position: absolute;top:68.8vh"/><div style="transform: scale(0.6);line-height: 90%;">入库量统计</div></div>
         <div class="navcontent">
           <div class="detail">
             <div class="detailnav" style="background-color: #d5b100;"><div class="navfont">总数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.allcount||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.allcount||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.allcount||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.allcount||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.allcount||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.allcount||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #d44144;"><div class="navfont">重庆产品数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.chongqing||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.chongqing||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.chongqing||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.chongqing||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.chongqing||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.chongqing||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #57c269;"><div class="navfont">人人网数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.renren||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.renren||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.renren||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.renren||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.renren||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.renren||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #6648ff;"><div class="navfont">世纪佳缘数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.sjjy||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.sjjy||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.sjjy||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.sjjy||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.sjjy||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.sjjy||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #fe6e00;"><div class="navfont">badoo数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.badoo||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.badoo||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.badoo||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.badoo||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.badoo||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.badoo||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
           <div class="detail">
             <div class="detailnav" style="background-color: #13a7d0;"><div class="navfont">公司内部数据</div></div>
             <div class="detailcontent">
-              <div class="detailcontentleft">
-                <span class="littlefont">本日</span>
-                <span class="littlefont">本周</span>
-                <span class="littlefont">本月</span>
-              </div>
-              <div class="detailcontentright">
-                <span class="littlenum">{{washedcount.today.internal||'no data'}}</span>
-                <span class="littlenum">{{washedcount.weekly.internal||'no data'}}</span>
-                <span class="littlenum">{{washedcount.monthly.internal||'no data'}}</span>
-              </div>
+              <span class="littlenum">{{collectcount.today.dgface||'no data'}}</span>
+              <span class="littlefont">本日</span>
+              <span class="littlenum">{{collectcount.weekly.dgface||'no data'}}</span>
+              <span class="littlefont">本周</span>
+              <span class="littlenum">{{collectcount.monthly.dgface||'no data'}}</span>
+              <span class="littlefont">本月</span>
             </div>
           </div>
         </div>
@@ -436,7 +388,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -444,7 +396,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -452,7 +404,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -460,7 +412,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -468,7 +420,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgfaec": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -476,7 +428,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -484,7 +436,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           },
@@ -492,7 +444,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": null,
-            "internal": null,
+            "dgface": null,
             "renren": 0,
             "sjjy": null
           }
@@ -502,7 +454,7 @@ export default {
             "allcount":0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0,
           },
@@ -510,7 +462,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0,
           },
@@ -518,7 +470,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           }
@@ -528,7 +480,7 @@ export default {
             "allcount":0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0,
           },
@@ -536,7 +488,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0,
           },
@@ -544,7 +496,7 @@ export default {
             "allcount": 0,
             "badoo": 0,
             "chongqing": 0,
-            "internal": 0,
+            "dgface": 0,
             "renren": 0,
             "sjjy": 0
           }
@@ -620,7 +572,7 @@ export default {
   }
   .navcontent{
     background-color: #14202f;
-    width: 100%;
+    width: 95.52vw;
     height: 23.71vh;
     margin: 1.11vh 0 0 1.3vw;
     display: flex;
@@ -660,9 +612,12 @@ export default {
     transform: scale(0.6);
   }
   .detailcontent{
-    margin: 1.67vh 0 0 0.47vw;
+    height: 18.11vh;
+    margin-top: 2.32vh;
+    align-items: center;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
   }
 
   .title{
@@ -681,7 +636,7 @@ export default {
     justify-content: space-between;
   }
   .littlefont{
-    transform: scale(0.6);
+    transform: scale(0.7);
     font-size: 80%;
     white-space: nowrap;
   }
@@ -693,8 +648,7 @@ export default {
     justify-content: space-between;
   }
   .littlenum{
-    transform: scale(0.7);
-    font-size: 80%;
+    font-size: 90%;
     white-space: nowrap;
     color: #0172f7;
     display: flex;
@@ -717,10 +671,11 @@ export default {
 
   }
   .btnum{
-    margin-top:1%;
+    margin-top:2%;
     height:22%;
     color: #0077fd;
     font-size: 50%;
+    transform: scale(0.9);
   }
   .bbpic{
     height: 57.14%;
@@ -728,7 +683,7 @@ export default {
     align-items: center;
     font-size: 70%;
     transform: scale(0.6);
-    margin-top: 5%;
+    margin-top: 4%;
     white-space: nowrap;
   }
   i{
